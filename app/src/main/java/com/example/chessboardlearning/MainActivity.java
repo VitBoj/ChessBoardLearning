@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 ///////////////////////////////////////////////////////////////////////
-    public void ChackIfRight(String color) {
+    public void CheckIfCorrect(String color) {
         String key=viewAsk.getText().toString();
         String value = FillMap().get(key).toString();
         if(value.equals(color)){
@@ -114,11 +114,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case (R.id.buttonBlack):
                 String color="Black";
-                ChackIfRight(color);
+                CheckIfCorrect(color);
                 break;
             case (R.id.buttonWhite):
                 String color2="White";
-                ChackIfRight(color2);
+                CheckIfCorrect(color2);
                 break;
             case(R.id.refresh):
                 ShowAsk(FillMap());
