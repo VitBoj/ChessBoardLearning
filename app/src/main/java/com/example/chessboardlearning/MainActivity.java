@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void fillFirstSet(Map<String, String> map, char setLetter) {
         for (int i = 1; i < 9; i++) {
-            if (isEven(i) == true) {
+            if (isEven(i)) {
                 map.put(setLetter + String.valueOf(i), "Black");
             } else map.put(setLetter + String.valueOf(i), "White");
         }
@@ -54,18 +54,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void fillSecondSet(Map<String, String> map, char setLetter) {
         for (int i = 1; i < 9; i++) {
-            if (isEven(i) == true) {
+            if (isEven(i)) {
                 map.put(setLetter + String.valueOf(i), "White");
             } else map.put(setLetter + String.valueOf(i), "Black");
         }
     }
 
     public boolean isEven(int n) {
-        if (n % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return n % 2 == 0;
     }
 
     public void ShowAsk(Map hashMap) {
